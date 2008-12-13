@@ -1,0 +1,22 @@
+---
+name: App-ZofCMS-Plugin-SplitPriceSelect
+version: 0.0101
+author:
+  - "Zoffix <'zoffix@cpan.org'>"
+abstract: plugin for generating a <select> for "price range" out of arbitrary range of prices.
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  App::ZofCMS::Plugin::Base: 0.0102
+  HTML::Template: 2.9
+build_requires:
+  Test::More: 0
+provides:
+  App::ZofCMS::Plugin::SplitPriceSelect:
+    file: lib/App/ZofCMS/Plugin/SplitPriceSelect.pm
+    version: 0.0101
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
