@@ -1,5 +1,8 @@
 Revision history for App-ZofCMS-Plugin-SplitPriceSelect
 
+0.0102  December 13, 2008
+        Fixed empty example file
+
 0.0101  December 12, 2008
         First version, released on an unsuspecting world.
 

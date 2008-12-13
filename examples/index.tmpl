@@ -1,0 +1,10 @@
+{
+    body => \'index.tmpl',
+    title => 'Test',
+
+    plugins => [ qw/SplitPriceSelect/ ],
+
+    plug_split_price_select => {
+        prices => [ 200, 300, 1000, 4000, 5000, 6000, 7000 ],
+    },
+}
