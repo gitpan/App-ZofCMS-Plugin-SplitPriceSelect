@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::SplitPriceSelect;
 use warnings;
 use strict;
 
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 
 use base 'App::ZofCMS::Plugin::Base';
 use HTML::Template;
@@ -126,7 +126,23 @@ You need to add the plugin in the list of plugins to execute.
         dollar_sign => 1,
     }
 
-The C<plug_split_price_select> first-level key takes a hashref as a value. If a certain key
+    plug_split_price_select => sub {
+        my ( $t, $q, $config ) = @_;
+        return {
+            prices      => [ qw/foo bar baz/ ],
+            t_name      => 'plug_split_price_select',
+            options     => 3,
+            name        => 'plug_split_price_select',
+            id          => 'plug_split_price_select',
+            dollar_sign => 1,
+        };
+    }
+
+The C<plug_split_price_select> first-level key takes a hashref or a subref as a value. If subref is specified,
+its return value will be assigned to C<plug_split_price_select> as if it was already there. If sub returns
+an C<undef>, then plugin will stop further processing. The C<@_> of the subref will
+contain (in that order): ZofCMS Tempalate hashref, query parameters hashref and
+L<App::ZofCMS::Config> object. If a certain key
 in that hashref is specified in both, Main Config File and ZofCMS Template, then the
 value given in ZofCMS Template will take precedence. Plugin will not run if
 C<plug_split_price_select> is not specified (or if C<prices> key's arrayref is empty).
