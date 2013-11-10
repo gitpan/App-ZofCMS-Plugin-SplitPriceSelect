@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::SplitPriceSelect;
 use warnings;
 use strict;
 
-our $VERSION = '0.0103';
+our $VERSION = '0.0104';
 
 use base 'App::ZofCMS::Plugin::Base';
 use HTML::Template;
@@ -75,6 +75,8 @@ END_TEMPLATE
 
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 

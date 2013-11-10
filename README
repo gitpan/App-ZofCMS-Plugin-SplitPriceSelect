@@ -1,9 +1,10 @@
 App-ZofCMS-Plugin-SplitPriceSelect
 
-The module is a plugin for L<App::ZofCMS> that allows you to give several prices and plugin
-will create a C<< <select> >> HTML element with its C<< <option> >>s containing I<ranges> of
-prices. The idea is that you'd specify how many options you would want to have and plugin will
-figure out how to split the prices to generate that many ranges.
+The module is a plugin for L<App::ZofCMS> that allows you to give
+several prices and plugin will create a C<< <select> >> HTML element
+with its C<< <option> >>s containing I<ranges> of prices. The idea is
+that you'd specify how many options you would want to have and plugin
+will figure out how to split the prices to generate that many ranges.
 
 INSTALLATION
 
